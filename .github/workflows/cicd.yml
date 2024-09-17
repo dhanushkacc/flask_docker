@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build The Docker Image
-      run: docker build . --file DockerFile --tag workflow-test:$(date +%s)
+      run: docker build . --file DockerFile 
   build-and-test:
     runs-on: ubuntu-latest
 
@@ -59,6 +59,3 @@ jobs:
         file: ./DockerFile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/flasktest-app:latest
-
-    - name: Image digest
-      run: echo ${{ steps.build-and-publish.outputs.digest }}
