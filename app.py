@@ -10,7 +10,7 @@ def home():
 
     if not operation or not num1 or not num2:
         return '''
-        Welcome to the Calculator App!
+       
         Use the following format to calculate:
         /?operation=<operation>&num1=<number1>&num2=<number2>
         
