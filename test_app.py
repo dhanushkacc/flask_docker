@@ -3,6 +3,10 @@ from app import app
 def test_home_instructions():
     response = app.test_client().get('/')
     assert response.status_code == 200
+    assert response.json['result'] == '''Use the following format to calculate:
+        /?operation=<operation>&num1=<number1>&num2=<number2>
+        
+        Supported operations: add, subtract, multiply, divide'''
     
 def test_calculate_add():
     response = app.test_client().get('/?operation=add&num1=5&num2=3')
