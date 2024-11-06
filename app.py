@@ -11,7 +11,7 @@ def home():
     if not operation or not num1 or not num2:
         return '''
        
-        Use the following format to calculate:
+         the following format to calculate:
         /?operation=<operation>&num1=<number1>&num2=<number2>
         
         Supported operations: add, subtract, multiply, divide
