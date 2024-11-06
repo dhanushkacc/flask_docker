@@ -24,7 +24,7 @@ def home():
         return jsonify({"error": "Invalid numbers provided"}), 400
 
     if operation == 'add':
-        result = num1 - num2
+        result = num1 + num2
     elif operation == 'subtract':
         result = num1 - num2
     elif operation == 'multiply':
